@@ -1,0 +1,36 @@
+Ejercicio 3. Responda en un archivo .txt
+a. Verdadero o Falso (justificar en ambos casos, en verdadero o falso):
+	1.​ Zombie es un estado posible del sistema operativo Android.
+Verdadero, dado que el estado Zombie es uno presente en el kernel de Linux, y Android 
+utiliza dicho kernel, entonces es cierto que es posible dicho estado en Android.
+
+	2.​ Tanto Windows como Linux utilizan el algoritmo de planificación de CPU CFS, 
+	porque son sistemas operativos más complejos.
+Falso, Linux utiliza algoritmo de planificacion CFS, pero Windows utiliza un algoritmo 
+dispatcher-por prioridades.
+	
+	3.​ En el algoritmo de FCFS podría suceder starvation (inanición).​
+Falso, dado que en dicho algoritmo se respeta un orden FIFO (First-In-First-Out), todo
+todo proceso llegara a tener tiempo de CPU, es decir, no quedaran infinitamente esperando
+por su turno (starvation).
+
+b. COMPLETAR
+En XINU :
+El estado de un proceso SLEEPING corresponde al estado ..LISTO SUSPENDIDO.. en “la teoría”
+El estado de un proceso SUSPENDED corresponde al estado ..BLOQUEADO SUSPENDIDO.. en “la teoría”
+El estado de un proceso CURRENT corresponde al estado ..EJECUTANDO.. en la “teoría”.
+
+c. Estado de procesos en XINU.
+Suponga que en una computadora con una única CPU y XINU existe un proceso que tiene un bucle ‘for’
+infinito, que tiene más prioridad que los demás, y que nunca pasa a un estado de durmiendo o bloqueado....
+​
+(Indique cuales opciones debajo son correctas -justifique las correctas-)
+1.​ Los demás procesos eventualmente obtendrán la CPU porque el sistema es también round robin.
+	Falso.
+2.​ Los demás procesos en estado de listo nunca obtendrán la CPU y se producirá startvation.
+	Verdadero. Dado que el algoritmo de XINU es round robin con prioridades, entonces el bucle nunca
+	liberaria al CPU.
+3.​ Los demás procesos podrían intentar hacer un kill() del proceso con alta prioridad para matarlo.
+	Falso.
+4.​ Algún proceso obtendrá la CPU luego de 2ms, porque el QUANTUM en XINU es 2ms.
+	Falso.
