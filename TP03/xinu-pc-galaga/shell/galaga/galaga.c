@@ -36,7 +36,7 @@ typedef unsigned short u16;
 //#define BUTTONS *(volatile unsigned int *)0x4000130
 #define BUTTON_A	0x24 //j
 #define BUTTON_B	0x25 //k
-#define BUTTON_SELECT	0x03 //3
+#define BUTTON_SELECT	0x03 //2
 #define BUTTON_START	0x2c
 #define BUTTON_UP	0x11 //w
 #define BUTTON_LEFT	0x1e //a
@@ -438,9 +438,11 @@ void endGame() {
 	while(1) {
 		if (KEY_DOWN_NOW(BUTTON_SELECT)) {
 			galaga();
+			break;
 		}
 		if (KEY_DOWN_NOW(BUTTON_START))	{
 			galaga();
+			break;
 		}
 	}
 }
