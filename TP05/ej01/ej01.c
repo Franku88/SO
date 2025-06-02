@@ -45,7 +45,15 @@ int main() {
     return(0);
 }
 
-/* b.
+/* 
+   a.
+    El programa solicita al SO mediante malloc 
+    N*BSIZE = 240000*4096 bytes 
+            = 983040000 bytes 
+            = 960000KB 
+            = 937,5MB
+
+   b.
     Resultado de comando time
     real    0m46,560s
     user    0m45,952s
@@ -69,4 +77,15 @@ int main() {
     la dir. virtual de main es 0x400AAE
     la dir. virtual de i es 0x7FFDB816ED6C 
     la dir. virtual de j es 0x7FFDB816ED68 
+   
+   f. Salida de cat /proc/PID/maps
+    00400000-004b2000 r-xp 00000000 00:29 17193883705       /export/home/.../ej01/ej01
+    006b1000-006b4000 rw-p 000b1000 00:29 17193883705       /export/home/.../ej01/ej01
+    006b4000-006b6000 rw-p 00000000 00:00 0 
+    00903000-00926000 rw-p 00000000 00:00 0                 [heap]
+    7f2646f98000-7f2681919000 rw-p 00000000 00:00 0 
+    7fff9d1de000-7fff9d1ff000 rw-p 00000000 00:00 0         [stack]
+    7fff9d201000-7fff9d203000 r--p 00000000 00:00 0         [vvar]
+    7fff9d203000-7fff9d205000 r-xp 00000000 00:00 0         [vdso]
+    ffffffffff600000-ffffffffff601000 r-xp 00000000 00:00 0 [vsyscall]
 */
