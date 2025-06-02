@@ -1,0 +1,18 @@
+Respuestas:
+
+a) tiempos registrados mediante comando time:
+
+   V1 time
+    real    0m47,153s
+    user    0m46,516s
+    sys     0m0,592s
+
+   V2 time
+    real    0m5,889s
+    user    0m5,252s
+    sys     0m0,632s
+
+   V3 time
+    real    0m12,978s
+    user    0m12,472s
+    sys     0m0,484s
