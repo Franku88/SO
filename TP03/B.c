@@ -31,7 +31,9 @@ int main() {
 	// Muestra desde el segmento de memcompartida
 	printf("Contenido de la memoria compartida: \n%s\n", (char *)ptr);
 	
-	/* Borramos segmento de memcompartida*/
+	/* Borramos nombre de segmento de memcompartida,
+	es decir, ningun otro proceso podrá acceder al mismo
+	desde que se ejecute shm_unlink */
 	if (shm_unlink(name) == -1) {
 		printf("Error al borrar %s.\n", name);
 		return -1;
